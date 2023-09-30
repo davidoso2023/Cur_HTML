@@ -1,4 +1,7 @@
 h1 {
   text-align: center;
-  color: red;
+  font-size: 2rem;
+}
+span {
+  font-size: 2em;
 }
