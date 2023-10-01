@@ -1,7 +1,62 @@
-h1 {
+/*la linea html, y body facilita el uso de los rem*/ 
+/*1 rem, equivale a 10 px*/
+/*clases con . y id con #*/
+/*important prioriza en caso que sea muy nesesario*/
+/*dysplay vienen por defecto pero se pueden cambiar es para la forma como se 
+organizan*/
+/*hover es para el amarillo sobre el enlace*/
+/*los mq segun el dispositivo son:
+tel:480px
+table:768px
+pc:1140px*/
+:root {
+  --blanco:#ffffff;
+  --oscuro:#212121;
+  --primario:#FFC107;
+  --secundario:#0097A7;
+  --gris:#757575;
+
+}
+html{
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-family: 'Krub', sans-serif;
+}
+.titulo {
   text-align: center;
+  font-size: 3.8rem;
+}
+.titulo span{
   font-size: 2rem;
 }
-span {
-  font-size: 2em;
+.contenedor{
+ max-width: 120rem;
+margin: 0 auto;
 }
+.nav-bg{
+   background-color: var(--secundario);
+}
+.navegacion-principal{
+ display: flex;
+ flex-direction: column;
+
+}
+@media (min-width: 480px) {
+    .navegacion-principal{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+}
+.navegacion-principal a {
+padding: 1rem ;
+color: var(--blanco);
+text-decoration: none;
+font-size: 2rem;
+font-weight: 700;
+}
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+} 
